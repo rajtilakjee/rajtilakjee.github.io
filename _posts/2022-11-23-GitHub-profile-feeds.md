@@ -4,7 +4,7 @@ title:  "How to get your GitHub RSS Feed"
 categories: github
 ---
 
-Here are the links to the RSS feeds of any GitHub repositories, commits, activities etc. It is available for every profile, you simply need to replace the username, repo name, and so on.<!--more-->
+Here are the links to the RSS feeds of any GitHub repositories, commits, activities etc. It is available for every profile, you simply need to replace the username, repo name, and so on.\n\n\n
 
 {% highlight html %}
 
