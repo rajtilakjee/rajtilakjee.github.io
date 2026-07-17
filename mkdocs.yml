@@ -1,0 +1,6 @@
+site_name: sudo rm -rf /
+site_description: A small corner of the internet just for myself.
+site_author: Rajtilak Bhattacharjee
+site_url: https://rajtilakjee.github.io/
+theme:
+  name: material
