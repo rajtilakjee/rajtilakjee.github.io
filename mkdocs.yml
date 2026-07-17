@@ -5,12 +5,10 @@ site_url: https://rajtilakjee.github.io/
 theme:
   name: material
   font:
-    text: Newsreader
+    text: Roboto
 
 extra_css:
   - stylesheets/coffee.css
 
 nav:
   - Home: index.md
-  - Getting Started:
-    - Installation: getting-started.md
