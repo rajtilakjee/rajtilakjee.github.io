@@ -4,3 +4,6 @@ site_author: Rajtilak Bhattacharjee
 site_url: https://rajtilakjee.github.io/
 theme:
   name: material
+extra_css:
+  - stylesheets/extra.css
+  
