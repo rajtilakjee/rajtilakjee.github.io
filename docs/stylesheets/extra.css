@@ -1,0 +1,232 @@
+/* ---------- Fonts ---------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:wght@500;700&family=JetBrains+Mono:wght@400;500&display=swap");
+
+/* ---------- Palette ---------- */
+
+:root {
+
+    --md-primary-fg-color: #8b6f47;
+    --md-primary-fg-color--light: #b08b57;
+    --md-primary-fg-color--dark: #6f5634;
+
+    --md-default-bg-color: #f5efe4;
+    --md-default-fg-color: #2f2a25;
+
+    --md-accent-fg-color: #8b6f47;
+
+    --surface: #efe6d7;
+    --border: #d8ccb9;
+
+    --code-bg: #ece4d6;
+
+}
+
+/* ---------- Global ---------- */
+
+body {
+
+    font-family: Inter, sans-serif;
+    background: #f5efe4;
+
+}
+
+/* ---------- Header ---------- */
+
+.md-header {
+
+    background: #efe6d7;
+    box-shadow: none;
+    border-bottom: 1px solid var(--border);
+
+}
+
+/* ---------- Sidebar ---------- */
+
+.md-sidebar {
+
+    background: #f5efe4;
+
+}
+
+.md-nav__title {
+
+    font-weight: 700;
+    font-family: Newsreader, serif;
+
+}
+
+.md-nav__link {
+
+    color: #5f5448;
+    transition: .2s;
+
+}
+
+.md-nav__link:hover {
+
+    color: #8b6f47;
+
+}
+
+/* ---------- Main ---------- */
+
+.md-content {
+
+    max-width: 860px;
+
+}
+
+.md-content__inner {
+
+    margin-top: 2rem;
+
+}
+
+/* ---------- Headings ---------- */
+
+h1,h2,h3,h4 {
+
+    font-family: Newsreader, serif;
+    font-weight: 700;
+    color: #2c241d;
+
+}
+
+h1 {
+
+    font-size: 2.8rem;
+
+}
+
+h2 {
+
+    margin-top: 3rem;
+
+}
+
+h3 {
+
+    margin-top: 2rem;
+
+}
+
+/* ---------- Paragraphs ---------- */
+
+p {
+
+    line-height: 1.8;
+    color: #4d453d;
+
+}
+
+/* ---------- Links ---------- */
+
+a {
+
+    color: #7b5d3d;
+
+}
+
+a:hover {
+
+    color: #5d4328;
+
+}
+
+/* ---------- Code ---------- */
+
+code {
+
+    font-family: "JetBrains Mono";
+    background: var(--code-bg);
+    padding: .15rem .35rem;
+    border-radius: 5px;
+
+}
+
+.highlight {
+
+    background: #ece4d6;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+
+}
+
+.highlight pre {
+
+    padding: 1rem;
+
+}
+
+/* ---------- Tables ---------- */
+
+table {
+
+    border-radius: 12px;
+    overflow: hidden;
+
+}
+
+thead {
+
+    background: #e5dac7;
+
+}
+
+/* ---------- Admonitions ---------- */
+
+.md-typeset .admonition {
+
+    border-radius: 12px;
+
+    border: none;
+
+    background: #efe6d7;
+
+}
+
+/* ---------- Search ---------- */
+
+.md-search__form {
+
+    background: white;
+    border-radius: 30px;
+
+}
+
+/* ---------- Buttons ---------- */
+
+.md-button {
+
+    border-radius: 8px;
+
+}
+
+/* ---------- Footer ---------- */
+
+.md-footer {
+
+    background: #efe6d7;
+
+}
+
+/* ---------- Images ---------- */
+
+img {
+
+    border-radius: 10px;
+
+}
+
+/* ---------- Blockquotes ---------- */
+
+blockquote {
+
+    border-left: 4px solid #8b6f47;
+    color: #5a5147;
+    background: #efe6d7;
+    padding: 1rem 1.2rem;
+    border-radius: 0 10px 10px 0;
+
+}
