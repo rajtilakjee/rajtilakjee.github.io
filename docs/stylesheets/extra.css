@@ -1,79 +1,184 @@
-/* ---------- Fonts ---------- */
+/*--------------------------------------------------------------
+Coffee House Theme for Material for MkDocs
+--------------------------------------------------------------*/
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:wght@500;700&family=JetBrains+Mono:wght@400;500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
-/* ---------- Palette ---------- */
+/*--------------------------------------------------------------
+LIGHT MODE
+--------------------------------------------------------------*/
 
-:root {
+[data-md-color-scheme="default"] {
 
-    --md-primary-fg-color: #8b6f47;
-    --md-primary-fg-color--light: #b08b57;
-    --md-primary-fg-color--dark: #6f5634;
+    --md-primary-fg-color: #6f4e37;
+    --md-primary-fg-color--light: #8a6648;
+    --md-primary-fg-color--dark: #503626;
 
-    --md-default-bg-color: #f5efe4;
+    --md-accent-fg-color: #9c6b3f;
+
+    --md-default-bg-color: #f6efe4;
     --md-default-fg-color: #2f2a25;
+    --md-default-fg-color--light: #61584e;
 
-    --md-accent-fg-color: #8b6f47;
+    --paper: #fbf8f3;
+    --surface: #efe4d5;
+    --border: #dac9b5;
 
-    --surface: #efe6d7;
-    --border: #d8ccb9;
-
-    --code-bg: #ece4d6;
-
+    --code-bg: #ebe1d2;
+    --link: #7b4d28;
 }
 
-/* ---------- Global ---------- */
+/*--------------------------------------------------------------
+DARK MODE
+--------------------------------------------------------------*/
+
+[data-md-color-scheme="slate"] {
+
+    --md-primary-fg-color: #5b4334;
+    --md-primary-fg-color--light: #745643;
+    --md-primary-fg-color--dark: #402d22;
+
+    --md-accent-fg-color: #c89d66;
+
+    --md-default-bg-color: #211b18;
+    --md-default-fg-color: #ebe3d8;
+
+    --paper: #2a2320;
+    --surface: #342b26;
+    --border: #4b4038;
+
+    --code-bg: #312925;
+    --link: #d3a26a;
+}
+
+/*--------------------------------------------------------------
+TYPOGRAPHY
+--------------------------------------------------------------*/
 
 body {
-
-    font-family: Inter, sans-serif;
-    background: #f5efe4;
-
+    font-family: "Inter", sans-serif;
+    line-height: 1.75;
 }
 
-/* ---------- Header ---------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    font-family: "Newsreader", serif;
+    font-weight: 700;
+    letter-spacing: -.02em;
+}
+
+h1 {
+    font-size: 2.8rem;
+    margin-bottom: .8rem;
+}
+
+h2 {
+    margin-top: 3rem;
+    padding-bottom: .3rem;
+    border-bottom: 1px solid var(--border);
+}
+
+h3 {
+    margin-top: 2rem;
+}
+
+/*--------------------------------------------------------------
+HEADER
+--------------------------------------------------------------*/
 
 .md-header {
 
-    background: #efe6d7;
-    box-shadow: none;
-    border-bottom: 1px solid var(--border);
+    background: var(--md-primary-fg-color);
+
+    color: white;
+
+    box-shadow: 0 2px 14px rgba(0,0,0,.12);
+}
+
+.md-header__title,
+.md-header__button,
+.md-header a,
+.md-header__topic {
+
+    color: #fff !important;
 
 }
 
-/* ---------- Sidebar ---------- */
+/*--------------------------------------------------------------
+TABS
+--------------------------------------------------------------*/
+
+.md-tabs {
+
+    background: var(--md-primary-fg-color--dark);
+
+}
+
+.md-tabs__link {
+
+    color: rgba(255,255,255,.8);
+
+}
+
+.md-tabs__link--active {
+
+    color: white;
+
+}
+
+/*--------------------------------------------------------------
+SIDEBAR
+--------------------------------------------------------------*/
 
 .md-sidebar {
 
-    background: #f5efe4;
+    background: transparent;
+
+}
+
+.md-sidebar--primary {
+
+    border-right: 1px solid var(--border);
 
 }
 
 .md-nav__title {
 
-    font-weight: 700;
-    font-family: Newsreader, serif;
-
+    font-family: "Newsreader", serif;
+    font-size: 1.05rem;
 }
 
 .md-nav__link {
 
-    color: #5f5448;
+    border-radius: 6px;
     transition: .2s;
 
 }
 
 .md-nav__link:hover {
 
-    color: #8b6f47;
+    background: rgba(111,78,55,.08);
 
 }
 
-/* ---------- Main ---------- */
+/*--------------------------------------------------------------
+CONTENT
+--------------------------------------------------------------*/
+
+.md-main {
+
+    background: var(--md-default-bg-color);
+
+}
 
 .md-content {
 
-    max-width: 860px;
+    max-width: 900px;
 
 }
 
@@ -83,73 +188,56 @@ body {
 
 }
 
-/* ---------- Headings ---------- */
+.md-typeset p {
 
-h1,h2,h3,h4 {
-
-    font-family: Newsreader, serif;
-    font-weight: 700;
-    color: #2c241d;
+    font-size: 1.05rem;
 
 }
 
-h1 {
+/*--------------------------------------------------------------
+LINKS
+--------------------------------------------------------------*/
 
-    font-size: 2.8rem;
+.md-typeset a {
 
-}
-
-h2 {
-
-    margin-top: 3rem;
-
-}
-
-h3 {
-
-    margin-top: 2rem;
+    color: var(--link);
+    text-decoration-thickness: 2px;
 
 }
 
-/* ---------- Paragraphs ---------- */
+.md-typeset a:hover {
 
-p {
-
-    line-height: 1.8;
-    color: #4d453d;
+    color: var(--md-primary-fg-color);
 
 }
 
-/* ---------- Links ---------- */
-
-a {
-
-    color: #7b5d3d;
-
-}
-
-a:hover {
-
-    color: #5d4328;
-
-}
-
-/* ---------- Code ---------- */
+/*--------------------------------------------------------------
+CODE
+--------------------------------------------------------------*/
 
 code {
 
-    font-family: "JetBrains Mono";
+    font-family: "JetBrains Mono", monospace;
+
+}
+
+.md-typeset code {
+
     background: var(--code-bg);
-    padding: .15rem .35rem;
-    border-radius: 5px;
+
+    border-radius: 6px;
+
+    padding: .2rem .4rem;
 
 }
 
 .highlight {
 
-    background: #ece4d6;
-    border: 1px solid var(--border);
     border-radius: 12px;
+
+    overflow: hidden;
+
+    border: 1px solid var(--border);
 
 }
 
@@ -159,43 +247,66 @@ code {
 
 }
 
-/* ---------- Tables ---------- */
+/*--------------------------------------------------------------
+BLOCKQUOTE
+--------------------------------------------------------------*/
 
-table {
+blockquote {
+
+    border-left: 5px solid var(--md-primary-fg-color);
+
+    background: var(--surface);
+
+    padding: 1rem 1.5rem;
+
+    border-radius: 0 10px 10px 0;
+
+}
+
+/*--------------------------------------------------------------
+TABLES
+--------------------------------------------------------------*/
+
+.md-typeset table {
 
     border-radius: 12px;
+
     overflow: hidden;
 
-}
-
-thead {
-
-    background: #e5dac7;
+    border: 1px solid var(--border);
 
 }
 
-/* ---------- Admonitions ---------- */
+.md-typeset thead {
 
-.md-typeset .admonition {
+    background: var(--surface);
+
+}
+
+.md-typeset th {
+
+    font-weight: 600;
+
+}
+
+/*--------------------------------------------------------------
+ADMONITIONS
+--------------------------------------------------------------*/
+
+.md-typeset .admonition,
+.md-typeset details {
 
     border-radius: 12px;
 
     border: none;
 
-    background: #efe6d7;
+    box-shadow: none;
 
 }
 
-/* ---------- Search ---------- */
-
-.md-search__form {
-
-    background: white;
-    border-radius: 30px;
-
-}
-
-/* ---------- Buttons ---------- */
+/*--------------------------------------------------------------
+BUTTONS
+--------------------------------------------------------------*/
 
 .md-button {
 
@@ -203,30 +314,92 @@ thead {
 
 }
 
-/* ---------- Footer ---------- */
+/*--------------------------------------------------------------
+SEARCH
+--------------------------------------------------------------*/
 
-.md-footer {
+.md-search__form {
 
-    background: #efe6d7;
+    border-radius: 24px;
+
+    background: rgba(255,255,255,.18);
 
 }
 
-/* ---------- Images ---------- */
+.md-search__input::placeholder {
 
-img {
+    color: rgba(255,255,255,.75);
+
+}
+
+/*--------------------------------------------------------------
+FOOTER
+--------------------------------------------------------------*/
+
+.md-footer {
+
+    background: var(--md-primary-fg-color);
+
+}
+
+.md-footer-meta {
+
+    background: var(--md-primary-fg-color--dark);
+
+}
+
+/*--------------------------------------------------------------
+IMAGES
+--------------------------------------------------------------*/
+
+.md-typeset img {
 
     border-radius: 10px;
 
 }
 
-/* ---------- Blockquotes ---------- */
+/*--------------------------------------------------------------
+HORIZONTAL RULE
+--------------------------------------------------------------*/
 
-blockquote {
+hr {
 
-    border-left: 4px solid #8b6f47;
-    color: #5a5147;
-    background: #efe6d7;
-    padding: 1rem 1.2rem;
-    border-radius: 0 10px 10px 0;
+    border: none;
+
+    border-top: 1px solid var(--border);
+
+}
+
+/*--------------------------------------------------------------
+SCROLLBAR
+--------------------------------------------------------------*/
+
+::-webkit-scrollbar {
+
+    width: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+
+    background: transparent;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: #b99d7b;
+
+    border-radius: 10px;
+
+}
+
+/*--------------------------------------------------------------
+SELECTION
+--------------------------------------------------------------*/
+
+::selection {
+
+    background: rgba(156,107,63,.25);
 
 }
