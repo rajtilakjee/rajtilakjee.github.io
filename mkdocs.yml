@@ -4,6 +4,8 @@ site_author: Rajtilak Bhattacharjee
 site_url: https://rajtilakjee.github.io/
 theme:
   name: material
+  font:
+    text: Newsreader
 
 extra_css:
   - stylesheets/coffee.css
