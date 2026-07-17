@@ -4,6 +4,20 @@ site_author: Rajtilak Bhattacharjee
 site_url: https://rajtilakjee.github.io/
 theme:
   name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: coffee
+      toggle:
+        icon: material/coffee
+        name: Switch to dark roast
+    - media: "(prefers-color-scheme: dark)"
+      scheme: coffee-dark
+      toggle:
+        icon: material/coffee-outline
+        name: Switch to light roast
+  font:
+    text: Fraunces
+    code: JetBrains Mono
+
 extra_css:
-  - stylesheets/extra.css
-  
+  - stylesheets/coffee.css
