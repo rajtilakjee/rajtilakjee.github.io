@@ -10,9 +10,6 @@ theme:
     - scheme: coffee
       primary: custom
       accent: custom
-      toggle:
-        icon: material/brightness-7
-        name: Switch to dark mode
 
 extra_css:
   - stylesheets/coffee.css
