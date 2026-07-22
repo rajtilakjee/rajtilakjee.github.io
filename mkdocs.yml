@@ -19,3 +19,5 @@ nav:
   - Tutorials:
       - Python Foundations Tutorial: tutorials/python-foundations-tutorial.md
       - Python Playlist by Corey Schafer: tutorials/python-playlist-by-corey-schafer.md
+  - Yet Another Search Engine:
+      - Because Ctrl + F Does Not Scale: yet-another-search-engine/what-is-searchcraft.md
