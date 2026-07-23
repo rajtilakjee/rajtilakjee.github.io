@@ -14,6 +14,11 @@ theme:
 extra_css:
   - stylesheets/coffee.css
 
+extra:
+  analytics:
+    provider: google
+    property: G-CDFF4ZJNVG
+
 nav:
   - Home: index.md
   - Tutorials:
