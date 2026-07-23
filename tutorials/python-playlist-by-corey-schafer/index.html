@@ -1,0 +1,751 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A small corner of the internet just for myself.">
+      
+      
+        <meta name="author" content="Rajtilak Bhattacharjee">
+      
+      
+        <link rel="canonical" href="https://rajtilakjee.github.io/tutorials/python-playlist-by-corey-schafer/">
+      
+      
+        <link rel="prev" href="../python-foundations-tutorial/">
+      
+      
+        <link rel="next" href="../../yet-another-search-engine/what-is-searchcraft/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Python Playlist by Corey Schafer - sudo rm -rf /</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/coffee.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-CDFF4ZJNVG"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-CDFF4ZJNVG",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-CDFF4ZJNVG",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="coffee" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#python-playlist-by-corey-schafer" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="sudo rm -rf /" class="md-header__button md-logo" aria-label="sudo rm -rf /" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            sudo rm -rf /
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Python Playlist by Corey Schafer
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="coffee" data-md-color-primary="custom" data-md-color-accent="custom"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="sudo rm -rf /" class="md-nav__button md-logo" aria-label="sudo rm -rf /" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    sudo rm -rf /
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutorials
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tutorials
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../python-foundations-tutorial/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python Foundations Tutorial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python Playlist by Corey Schafer
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python Playlist by Corey Schafer
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#object-oriented-programming" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Object-Oriented Programming
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#intermediate-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Intermediate Topics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modern-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modern Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Yet Another Search Engine
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Yet Another Search Engine
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../yet-another-search-engine/what-is-searchcraft/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Because Ctrl + F Does Not Scale
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#object-oriented-programming" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Object-Oriented Programming
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#intermediate-topics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Intermediate Topics
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modern-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modern Python
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="python-playlist-by-corey-schafer">Python Playlist by Corey Schafer</h1>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=YYXdXT2l-Gg">Python Tutorial for Beginners 1: Install and Setup for Mac and Windows</a></li>
+<li><a href="https://www.youtube.com/watch?v=k9TUPpGqYTo">Python Tutorial for Beginners 2: Strings - Working with Textual Data</a></li>
+<li><a href="https://www.youtube.com/watch?v=khKv-8q7YmY">Python Tutorial for Beginners 3: Integers and Floats - Working with Numeric Data</a></li>
+<li><a href="https://www.youtube.com/watch?v=W8KRzm-HUcc">Python Tutorial for Beginners 4: Lists, Tuples, and Sets</a></li>
+<li><a href="https://www.youtube.com/watch?v=daefaLgNkw0">Python Tutorial for Beginners 5: Dictionaries - Working with Key-Value Pairs</a></li>
+<li><a href="https://www.youtube.com/watch?v=DZwmZ8Usvnk">Python Tutorial for Beginners 6: Conditionals and Booleans - If, Else, and Elif Statements</a></li>
+<li><a href="https://www.youtube.com/watch?v=6iF8Xb7Z3wQ">Python Tutorial for Beginners 7: Loops and Iterations - For/While Loops</a></li>
+<li><a href="https://www.youtube.com/watch?v=9Os0o3wzS_I">Python Tutorial for Beginners 8: Functions</a></li>
+<li><a href="https://www.youtube.com/watch?v=CqvZ3vGoGs0">Python Tutorial for Beginners 9: Import Modules and Exploring The Standard Library</a></li>
+<li><a href="https://www.youtube.com/watch?v=U2ZN104hIcc">Python Tutorial: pip - An in-depth look at the package management system</a></li>
+<li><a href="https://www.youtube.com/watch?v=N5vscPTWKOk">Python Tutorial: virtualenv and why you should use virtual environments</a></li>
+<li><a href="https://www.youtube.com/watch?v=QVdf0LgmICw">Python Tutorial: Variable Scope - Understanding the LEGB rule and global/nonlocal statements</a></li>
+<li><a href="https://www.youtube.com/watch?v=ajrtAuDg3yw">Python Tutorial: Slicing Lists and Strings</a></li>
+<li><a href="https://www.youtube.com/watch?v=3dt4OGnU5sM">Python Tutorial: Comprehensions - How they work and why you should be using them</a></li>
+<li><a href="https://www.youtube.com/watch?v=D3JvDWO-BY4">Python Tutorial: Sorting Lists, Tuples, and Objects</a></li>
+<li><a href="https://www.youtube.com/watch?v=vTX3IwquFkc">Python Tutorial: String Formatting - Advanced Operations for Dicts, Lists, Numbers, and Dates</a></li>
+<li><a href="https://www.youtube.com/watch?v=tJxcKyFMTGo">Python Tutorial: OS Module - Use Underlying Operating System Functionality</a></li>
+<li><a href="https://www.youtube.com/watch?v=eirjjyP2qcQ">Python Tutorial: Datetime Module - How to work with Dates, Times, Timedeltas, and Timezones</a></li>
+<li><a href="https://www.youtube.com/watch?v=Uh2ebFW8OYM">Python Tutorial: File Objects - Reading and Writing to Files</a></li>
+<li><a href="https://www.youtube.com/watch?v=ve2pmm5JqmI">Python Tutorial: Automate Parsing and Renaming of Multiple Files</a></li>
+<li><a href="https://www.youtube.com/watch?v=KzqSDvzOFNA">Python Tutorial: Generate Random Numbers and Data Using the random Module</a></li>
+<li><a href="https://www.youtube.com/watch?v=q5uM4VKywbA">Python Tutorial: CSV Module - How to Read, Parse, and Write CSV Files</a></li>
+<li><a href="https://www.youtube.com/watch?v=bkpLhQd6YQM">Python Tutorial: Real World Example - Parsing Names From a CSV to an HTML List</a></li>
+<li><a href="https://www.youtube.com/watch?v=K8L6KVGG-7o">Python Tutorial: re Module - How to Write and Match Regular Expressions (Regex)</a></li>
+<li><a href="https://www.youtube.com/watch?v=NIWwJbo-9_8">Python Tutorial: Using Try/Except Blocks for Error Handling</a></li>
+<li><a href="https://www.youtube.com/watch?v=x3v9zMX1s4s">Python Tutorial: Duck Typing and Asking Forgiveness, Not Permission (EAFP)</a></li>
+<li><a href="https://www.youtube.com/watch?v=OdIHeg4jj2c">Python Tutorial: How to Set the Path and Switch Between Different Versions/Executables (Windows)</a></li>
+<li><a href="https://www.youtube.com/watch?v=nghuHvKLhJA">Python Quick Tip: F-Strings - How to Use Them and Advanced String Formatting</a></li>
+<li><a href="https://www.youtube.com/watch?v=bD05uGo_sVI">Python Tutorial: Generators - How to use them and the benefits you receive</a></li>
+<li><a href="https://www.youtube.com/watch?v=FsAPt_9Bf3U">Python Tutorial: Decorators - Dynamically Alter The Functionality Of Your Functions</a></li>
+<li><a href="https://www.youtube.com/watch?v=KlBPCzcQNU8">Python Tutorial: Decorators With Arguments</a></li>
+<li><a href="https://www.youtube.com/watch?v=GfxJYp9_nJA">Python Tutorial: Namedtuple - When and why should you use namedtuples?</a></li>
+</ul>
+<h2 id="object-oriented-programming">Object-Oriented Programming</h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=ZDa-Z5JzLYM">Python OOP Tutorial 1: Classes and Instances</a></li>
+<li><a href="https://www.youtube.com/watch?v=BJ-VvGyQxho">Python OOP Tutorial 2: Class Variables</a></li>
+<li><a href="https://www.youtube.com/watch?v=rq8cL2XMM5M">Python OOP Tutorial 3: classmethods and staticmethods</a></li>
+<li><a href="https://www.youtube.com/watch?v=RSl87lqOXDE">Python OOP Tutorial 4: Inheritance - Creating Subclasses</a></li>
+<li><a href="https://www.youtube.com/watch?v=3ohzBxoFHAY">Python OOP Tutorial 5: Special (Magic/Dunder) Methods</a></li>
+<li><a href="https://www.youtube.com/watch?v=jCzT9XFZ5bw">Python OOP Tutorial 6: Property Decorators - Getters, Setters, and Deleters</a></li>
+</ul>
+<h2 id="intermediate-topics">Intermediate Topics</h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=9N6a-VLBa2I">Python Tutorial: Working with JSON Data using the json Module</a></li>
+<li><a href="https://www.youtube.com/watch?v=k8asfUbWbI4">Python Tutorial: Calculate Number of Days, Weeks, or Months to Reach Specific Goals</a></li>
+<li><a href="https://www.youtube.com/watch?v=-aKFBoZpiqA">Python Tutorial: Context Managers - Efficiently Managing Resources</a></li>
+<li><a href="https://www.youtube.com/watch?v=5cvM-crlDvg">Python Tutorial: str() vs repr()</a></li>
+<li><a href="https://www.youtube.com/watch?v=pd-0G0MigUA">Python SQLite Tutorial: Complete Overview - Creating a Database, Table, and Running Queries</a></li>
+<li><a href="https://www.youtube.com/watch?v=-ARI4Cz-awo">Python Tutorial: Logging Basics - Logging to Files, Setting Levels, and Formatting</a></li>
+<li><a href="https://www.youtube.com/watch?v=jxmzY9soFXg">Python Tutorial: Logging Advanced - Loggers, Handlers, and Formatters</a></li>
+<li><a href="https://www.youtube.com/watch?v=IolxqkL7cD8">Python Quick Tip: Hiding Passwords and Secret Keys in Environment Variables (Windows)</a></li>
+<li><a href="https://www.youtube.com/watch?v=sugvnHA7ElY">Python Tutorial: if <strong>name</strong> == '<strong>main</strong>'</a></li>
+<li><a href="https://www.youtube.com/watch?v=6tNS--WetLI">Python Tutorial: Unit Testing Your Code with the unittest Module</a></li>
+<li><a href="https://www.youtube.com/watch?v=Dh-0lAyc3Bc">Python Tutorial: Else Clauses on Loops</a></li>
+<li><a href="https://www.youtube.com/watch?v=xqcTfplzr7c">Python Tutorial: Custom Sublime Text Build Systems</a></li>
+<li><a href="https://www.youtube.com/watch?v=mJokZMWnyGY">Python: Ex Machina Easter Egg - Hidden Message within the Code</a></li>
+<li><a href="https://www.youtube.com/watch?v=r3R3h5ly_8g">Python Tutorial: Sets - Set Methods and Operations to Solve Common Problems</a></li>
+<li><a href="https://www.youtube.com/watch?v=jTYiNjvnHZY">Python Tutorial: Iterators and Iterables - What Are They and How Do They Work?</a></li>
+<li><a href="https://www.youtube.com/watch?v=C3Z9lJXI6Qw">Python Coding Problem: Creating Your Own Iterators</a></li>
+<li><a href="https://www.youtube.com/watch?v=Qu3dThVy6KQ">Python Tutorial: Itertools Module - Iterator Functions for Efficient Looping</a></li>
+<li><a href="https://www.youtube.com/watch?v=tb8gHvYlCFs">Python Requests Tutorial: Request Web Pages, Download Images, POST Data, Read JSON, and More</a></li>
+<li><a href="https://www.youtube.com/watch?v=1lxrb_ezP-g">How to Write Python Scripts to Analyze JSON APIs and Sort Results</a></li>
+<li><a href="https://www.youtube.com/watch?v=zdJEYhA2AZQ">5 Common Python Mistakes and How to Fix Them</a></li>
+<li><a href="https://www.youtube.com/watch?v=_JGmemuINww">Python Tutorial: Clarifying the Issues with Mutable Default Arguments</a></li>
+<li><a href="https://www.youtube.com/watch?v=2Fp1N6dof0Y">Python Tutorial: Calling External Commands Using the Subprocess Module</a></li>
+<li><a href="https://www.youtube.com/watch?v=mO_dS3rXDIs">Python Quick Tip: The Difference Between "==" and "is" (Equality vs Identity)</a></li>
+<li><a href="https://www.youtube.com/watch?v=IEEhzQoKtQU">Python Threading Tutorial: Run Code Concurrently Using the Threading Module</a></li>
+<li><a href="https://www.youtube.com/watch?v=fKl2JW_qrso">Python Multiprocessing Tutorial: Run Code in Parallel Using the Multiprocessing Module</a></li>
+<li><a href="https://www.youtube.com/watch?v=z0gguhEmWiY">Python Tutorial: Zip Files - Creating and Extracting Zip Archives</a></li>
+<li><a href="https://www.youtube.com/watch?v=vQQEaSnQ_bs">Python YouTube API Tutorial: Using OAuth to Access User Accounts</a></li>
+<li><a href="https://www.youtube.com/watch?v=jRAAaDll34Q">How to Use ChatGPT as a Powerful Tool for Programming</a></li>
+<li><a href="https://www.youtube.com/watch?v=PYuTzLswn_Y">Python Tutorial: Securely Manage Passwords and API Keys with DotEnv</a></li>
+</ul>
+<h2 id="modern-python">Modern Python</h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=AMdG7IjgSPM">Python Tutorial: UV - A Faster, All-in-One Package Manager to Replace Pip and Venv</a></li>
+<li><a href="https://www.youtube.com/watch?v=fM4O9bModsE">Python Tutorial: Type Hinting vs Type Checking vs Data Validation - What's the Difference?</a></li>
+<li><a href="https://www.youtube.com/watch?v=RwH2UzC2rIo">Python Tutorial: Type Hints - From Basic Annotations to Advanced Generics</a></li>
+<li><a href="https://www.youtube.com/watch?v=oAkLSJNr5zY">Python Tutorial: AsyncIO - Complete Guide to Asynchronous Programming with Animations</a></li>
+<li><a href="https://www.youtube.com/watch?v=M81pfi64eeM">Python Pydantic Tutorial: Complete Data Validation Course (Used by FastAPI)</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
