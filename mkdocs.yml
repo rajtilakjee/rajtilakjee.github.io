@@ -1,0 +1,12 @@
+site_name: Rajtilak Bhattacharjee
+site_url: https://www.rajtilak.tech
+
+theme:
+  name: material
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md

@@ -1,0 +1,4 @@
+{
+  "buildCommand": "uv run mkdocs build",
+  "outputDirectory": "site"
+}
