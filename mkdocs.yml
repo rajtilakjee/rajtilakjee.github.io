@@ -6,7 +6,9 @@ theme:
 
 plugins:
   - search
+  - blog
 
 nav:
   - Home: index.md
-  - Getting Started: getting-started.md
+  - Blog: blog/index.md
+  - Resume: resume/index.md
