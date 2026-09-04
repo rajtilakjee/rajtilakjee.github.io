@@ -1,14 +1,91 @@
 site_name: Rajtilak Bhattacharjee
 site_url: https://www.rajtilak.tech
+site_description: Full-stack developer, machine learning engineer, and technical writer.
+site_author: Rajtilak Bhattacharjee
+
+repo_url: https://github.com/rajtilakjee/rajtilakjee.github.io
+repo_name: GitHub
+edit_uri: ""
+
+copyright: Copyright &copy; 2026 Rajtilak Bhattacharjee
 
 theme:
   name: material
+  palette:
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  font:
+    text: IBM Plex Sans
+    code: IBM Plex Mono
+  icon:
+    logo: fontawesome/solid/code
+    repo: fontawesome/brands/github
+  features:
+    - announce.dismiss
+    - content.code.annotate
+    - content.code.copy
+    - content.tooltips
+    - navigation.footer
+    - navigation.instant
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - search.highlight
+    - search.suggest
+    - toc.follow
 
 plugins:
   - search
-  - blog
+  - blog:
+      blog_dir: blog
+      post_excerpt: optional
+      post_readtime: true
+      authors: true
+      authors_file: "{blog}/.authors.yml"
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/rajtilakjee
+      name: GitHub
+    - icon: fontawesome/solid/globe
+      link: https://www.rajtilak.tech
+      name: Website
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 nav:
   - Home: index.md
+  - Projects: projects/index.md
   - Blog: blog/index.md
   - Resume: resume/index.md
