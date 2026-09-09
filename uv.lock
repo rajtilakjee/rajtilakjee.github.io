@@ -886,6 +886,7 @@ source = { virtual = "." }
 
 [package.dev-dependencies]
 dev = [
+    { name = "mkdocs" },
     { name = "mkdocs-material", extra = ["imaging"] },
     { name = "mkdocs-rss-plugin" },
 ]
@@ -894,6 +895,8 @@ dev = [
 
 [package.metadata.requires-dev]
 dev = [
+    { name = "mkdocs", specifier = ">=1.6" },
+    { name = "mkdocs-material", specifier = ">=9.6" },
     { name = "mkdocs-material", extras = ["imaging"], specifier = ">=9.7.7" },
     { name = "mkdocs-rss-plugin", specifier = ">=1.19.0" },
 ]
